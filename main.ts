@@ -1,6 +1,6 @@
 // In the name of Allah
 
-import { Plugin, MarkdownView, Editor } from 'obsidian';
+import { Plugin } from 'obsidian';
 
 export default class MyPlugin extends Plugin {
 
@@ -15,5 +15,7 @@ export default class MyPlugin extends Plugin {
 				element.parentElement?.setAttribute('dir', 'auto');
 			});
 		});
+
 	}
+	
 }
