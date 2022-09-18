@@ -4,3 +4,8 @@
 .view-header-title {
     unicode-bidi: plaintext;
 }
+
+/* Fix the rest elements of editor */
+.cm-line {
+    unicode-bidi: plaintext;
+}
