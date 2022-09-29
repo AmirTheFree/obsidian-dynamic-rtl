@@ -2,7 +2,7 @@
 
 import { Plugin } from 'obsidian';
 
-export default class MyPlugin extends Plugin {
+export default class DynamicRTL extends Plugin {
 
 	async onload() {
 

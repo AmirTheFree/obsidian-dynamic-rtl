@@ -1,5 +1,5 @@
 {
-	"name": "obsidian-dynamic-rtl",
+	"name": "dynamic-rtl",
 	"version": "0.1.0",
 	"description": "Dynamic RTL/LTR direction per line/paragraph, dependant on language!",
 	"main": "main.js",
