@@ -20,4 +20,4 @@ Just install the plugin from Obsidian.md app ✅
 
 **Be comfortable about submitting pull requests or issues 🐧**
 
-❤️ Thank you [lingdocs](https://forum.obsidian.md/u/lingdocs) & [Mustafa106](https://forum.obsidian.md/u/mustafa106)
+❤️ Thank you [lingdocs](https://forum.obsidian.md/u/lingdocs) & [Mustafa106](https://forum.obsidian.md/u/mustafa106) for initial idea.
