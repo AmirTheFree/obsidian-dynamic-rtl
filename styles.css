@@ -1,5 +1,24 @@
 /* In the name of Allah */
 
-.view-header-title /* File title above editor or reading view */ , .cm-line /* Fixes remaining elements of editor */ {
+.cm-line
+/* Fixes most elements of the editor */
+,
+.callout-inner-title
+/* Fixes callout title */
+,
+.inline-title
+
+/* Fixes the big note title inside the view */
+    {
     unicode-bidi: plaintext;
+}
+
+/* Fixes th elements */
+th {
+    text-align: -webkit-auto !important;
+}
+
+/* Fixes the bullet points margin with text in reading mode */
+.rtl-bullet-point:after {
+    margin-left: 40px;
 }
