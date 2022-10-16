@@ -16,6 +16,12 @@ export default class DynamicRTL extends Plugin {
 			container.querySelectorAll('table,ol,ul,pre').forEach(element => {
 				element.parentElement?.setAttribute('dir', 'auto');
 			});
+			// Fixes the Callout title
+			container.querySelectorAll('.callout-title').forEach(element => {
+				if (chars.includes(element.innerText.charAt(0))) {
+					element.style.direction = 'rtl';
+				}
+			});
 			// Fixes the qoutes border direction in RTL texts
 			container.querySelectorAll('blockquote').forEach(element => {
 				if (chars.includes(element.innerText.charAt(1))) {
