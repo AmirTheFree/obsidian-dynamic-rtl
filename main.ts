@@ -10,7 +10,7 @@ export default class DynamicRTL extends Plugin {
 
 		this.registerMarkdownPostProcessor((container, context) => {
 			// Fixes the Reading view (for tables & callouts this fixes the editor too)
-			container.querySelectorAll('p,div.cm-line,h1,h2,h3,h4,h5,h6').forEach(element => {
+			container.querySelectorAll('p,div.cm-line,h1,h2,h3,h4,h5,h6' + 'div.callout-title-inner').forEach(element => {
 				element.setAttribute('dir', 'auto');
 			});
 			container.querySelectorAll('table,ol,ul,pre').forEach(element => {

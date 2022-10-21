@@ -4,8 +4,11 @@
 /* Fixes most elements of the editor */
 ,
 .inline-title
-
 /* Fixes the big note title inside the view */
+,
+.view-header-title
+
+/* File title above editor or reading view for Obsidian v0.15.*/
     {
     unicode-bidi: plaintext;
 }
