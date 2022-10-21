@@ -37,7 +37,7 @@ export default class DynamicRTL extends Plugin {
 			// Fixes the bullet points problem in reading mode
 			container.querySelectorAll('ul').forEach(element => {
 				if (chars.includes(element.innerText.charAt(1))) {
-					element.querySelectorAll('.list-bullet').forEach(bullet => {
+					element.querySelectorAll('.list-bullet').forEach((bullet:HTMLElement) => {
 						bullet.style.float = 'right';
 						bullet.classList.add('rtl-bullet-point');
 					});
