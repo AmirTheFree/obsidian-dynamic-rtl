@@ -10,7 +10,7 @@ export default class DynamicRTL extends Plugin {
 
 		this.registerMarkdownPostProcessor((container, context) => {
 			// Fixes the Reading view (for tables & callouts this fixes the editor too)
-			container.querySelectorAll('p,div.cm-line,h1,h2,h3,h4,h5,h6' + 'div.callout-title-inner').forEach(element => {
+			container.querySelectorAll('p,div.cm-line,h1,h2,h3,h4,h5,h6' + ',div.callout-title-inner').forEach(element => {
 				element.setAttribute('dir', 'auto');
 			});
 			container.querySelectorAll('table,ol,ul,pre').forEach(element => {
@@ -31,7 +31,7 @@ export default class DynamicRTL extends Plugin {
 					element.querySelector('p').style.marginRight = '23px';
 				}
 			});
-			// Fixed the bullet points problem in reading mode
+			// Fixes the bullet points problem in reading mode
 			container.querySelectorAll('ul').forEach(element => {
 				if (chars.includes(element.innerText.charAt(1))) {
 					element.querySelectorAll('.list-bullet').forEach(bullet => {
