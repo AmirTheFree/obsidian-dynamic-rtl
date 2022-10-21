@@ -17,7 +17,7 @@ export default class DynamicRTL extends Plugin {
 				element.parentElement?.setAttribute('dir', 'auto');
 			});
 			// Fixes the Callout title
-			container.querySelectorAll('.callout-title').forEach(element => {
+			container.querySelectorAll('.callout-title').forEach((element:HTMLElement) => {
 				if (chars.includes(element.innerText.charAt(0))) {
 					element.style.direction = 'rtl';
 				}
@@ -28,7 +28,10 @@ export default class DynamicRTL extends Plugin {
 					element.style.borderLeft = '0';
 					element.style.borderRight = 'var(--blockquote-border-thickness) solid var(--blockquote-border-color)';
 					element.style.marginRight = '23px';
-					element.querySelector('p').style.marginRight = '23px';
+					const innerContent = element.querySelector('p');
+					if (innerContent) {
+						innerContent.style.marginRight = '23px';
+					}
 				}
 			});
 			// Fixes the bullet points problem in reading mode
