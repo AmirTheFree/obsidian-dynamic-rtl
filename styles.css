@@ -22,3 +22,8 @@ th {
 .rtl-bullet-point:after {
     margin-left: 40px;
 }
+
+/* Fixes the RTL checklists bad view */
+input.task-list-item-checkbox {
+    margin-left: 6px;
+}
