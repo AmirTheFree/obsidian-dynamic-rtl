@@ -6,7 +6,7 @@ export default class DynamicRTL extends Plugin {
 
 	async onload() {
 
-		const chars = ['ا','ب','پ','ت','ث','ج','چ','ح','خ','س','ش','د','ذ','ر','ز','ژ','س','ش','ص','ض','ط','ظ','ع','غ','ک','گ','ل','م','ن','و','ه','ی','۱','۲','۳','۴','۵','۶','۷','۸','۹','ي','ئ','آ','ك','ء','ؤ','إ','أ','ة'];
+		const chars = ['ا', 'ب', 'پ', 'ت', 'ث', 'ج', 'چ', 'ح', 'خ', 'س', 'ش', 'د', 'ذ', 'ر', 'ز', 'ژ', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ک', 'گ', 'ل', 'م', 'ن', 'و', 'ه', 'ی', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹', 'ي', 'ئ', 'آ', 'ك', 'ء', 'ؤ', 'إ', 'أ', 'ة'];
 
 		this.registerMarkdownPostProcessor((container, context) => {
 			// Fixes the Reading view (for tables & callouts this fixes the editor too)
@@ -17,7 +17,7 @@ export default class DynamicRTL extends Plugin {
 				element.parentElement?.setAttribute('dir', 'auto');
 			});
 			// Fixes the Callout title
-			container.querySelectorAll('.callout-title').forEach((element:HTMLElement) => {
+			container.querySelectorAll('.callout-title').forEach((element: HTMLElement) => {
 				if (chars.includes(element.innerText.charAt(0))) {
 					element.style.direction = 'rtl';
 				}
@@ -37,14 +37,24 @@ export default class DynamicRTL extends Plugin {
 			// Fixes the bullet points problem in reading mode
 			container.querySelectorAll('ul').forEach(element => {
 				if (chars.includes(element.innerText.charAt(1))) {
-					element.querySelectorAll('.list-bullet').forEach((bullet:HTMLElement) => {
+					element.querySelectorAll('.list-bullet').forEach((bullet: HTMLElement) => {
 						bullet.style.float = 'right';
 						bullet.classList.add('rtl-bullet-point');
 					});
 				}
 			});
+			// Moves collapse icon to the right for RTL headings
+			container.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach((element: HTMLElement) => {
+				if (chars.includes(element.innerText.charAt(0))) {
+					const icon = element.querySelector('div');
+					if (icon) {
+						icon.style.marginRight = '-22px';
+						icon.style.float = 'right';
+					}
+				}
+			})
 		});
 
 	}
-	
+
 }
