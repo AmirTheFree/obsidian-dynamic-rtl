@@ -29,7 +29,7 @@ input.task-list-item-checkbox {
 }
 
 /* Moves copy button for RTL code blocks to the left */
-.rtlPre {
+.rtlPre>button {
     right: unset !important;
     left: 0;
 }
