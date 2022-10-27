@@ -33,13 +33,15 @@ export default class DynamicRTL extends Plugin {
 					}
 				}
 			});
-			// Fixes the bullet points problem in reading mode
-			container.querySelectorAll('ul').forEach(element => {
+			// Fixes the bullet points problem & bidirectional problem in reading mode
+			container.querySelectorAll('li').forEach(element => {
 				if (chars.includes(element.innerText.charAt(1))) {
 					element.querySelectorAll('.list-bullet').forEach((bullet: HTMLElement) => {
 						bullet.style.float = 'right';
 						bullet.classList.add('rtl-bullet-point');
 					});
+				} else {
+					element.style.textAlign = 'left';
 				}
 			});
 			// Moves collapse icon to the right for RTL headings
