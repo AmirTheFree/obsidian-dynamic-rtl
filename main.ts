@@ -72,7 +72,7 @@ export default class DynamicRTL extends Plugin {
 				});
 				element.innerHTML = biDiCode;
 			});
-			// Moves copy button for RTL code blocks to the left
+			// Moves copy button for RTL code blocks to the left in reading view
 			container.querySelectorAll('pre').forEach((element: HTMLPreElement) => {
 				if (chars.includes(element.innerText.charAt(0))) {
 					element.classList.add('rtlPre');
