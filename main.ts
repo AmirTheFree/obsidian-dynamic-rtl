@@ -5,14 +5,14 @@ import { Plugin } from 'obsidian';
 export default class DynamicRTL extends Plugin {
 
 	async onload() {
-	const chars = ['ا', 'ب', 'پ', 'ت', 'ث', 'ج', 'چ', 'ح', 'خ', 'س', 'ش', 'د', 'ذ', 'ر', 'ز', 'ژ', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ک', 'گ', 'ل', 'م', 'ن', 'و', 'ه', 'ی', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹', 'ي', 'ئ', 'آ', 'ك', 'ء', 'ؤ', 'إ', 'أ', 'ة',/*Hebrew -> */ 'ק','ר','א','ט','ו','ן','ם','פ','ש','ד','ג','כ','ע','י','ח','ל','ך','ף','ז','ס','ב','ה','נ','מ','צ','ת','ץ'];
+		const chars:Array<string> = ['ا', 'ب', 'پ', 'ت', 'ث', 'ج', 'چ', 'ح', 'خ', 'س', 'ش', 'د', 'ذ', 'ر', 'ز', 'ژ', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ک', 'گ', 'ل', 'م', 'ن', 'و', 'ه', 'ی', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹', 'ي', 'ئ', 'آ', 'ك', 'ء', 'ؤ', 'إ', 'أ', 'ة',/*Hebrew -> */ 'ק', 'ר', 'א', 'ט', 'ו', 'ן', 'ם', 'פ', 'ש', 'ד', 'ג', 'כ', 'ע', 'י', 'ח', 'ל', 'ך', 'ף', 'ז', 'ס', 'ב', 'ה', 'נ', 'מ', 'צ', 'ת', 'ץ'];
 
 		this.registerMarkdownPostProcessor((container, context) => {
 			// Fixes the Reading view (for tables & callouts this fixes the editor too)
 			container.querySelectorAll('p,div.cm-line,h1,h2,h3,h4,h5,h6' + ',div.callout-title-inner').forEach(element => {
 				element.setAttribute('dir', 'auto');
 			});
-			container.querySelectorAll('table,ol,ul,pre').forEach(element => {
+			container.querySelectorAll('table,ol,ul,pre').forEach((element: HTMLElement) => {
 				element.parentElement?.setAttribute('dir', 'auto');
 			});
 			// Fixes the Callout title
@@ -22,7 +22,7 @@ export default class DynamicRTL extends Plugin {
 				}
 			});
 			// Fixes the qoutes border direction in RTL texts
-			container.querySelectorAll('blockquote').forEach(element => {
+			container.querySelectorAll('blockquote').forEach((element: HTMLElement) => {
 				if (chars.includes(element.innerText.charAt(1))) {
 					element.style.borderLeft = '0';
 					element.style.borderRight = 'var(--blockquote-border-thickness) solid var(--blockquote-border-color)';
@@ -53,7 +53,7 @@ export default class DynamicRTL extends Plugin {
 						icon.style.float = 'right';
 					}
 				}
-			})
+			});
 		});
 
 	}
