@@ -5,7 +5,7 @@ import { Plugin } from 'obsidian';
 export default class DynamicRTL extends Plugin {
 
 	async onload() {
-		const chars:Array<string> = ['ا', 'ب', 'پ', 'ت', 'ث', 'ج', 'چ', 'ح', 'خ', 'س', 'ش', 'د', 'ذ', 'ر', 'ز', 'ژ', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ک', 'گ', 'ل', 'م', 'ن', 'و', 'ه', 'ی', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹', 'ي', 'ئ', 'آ', 'ك', 'ء', 'ؤ', 'إ', 'أ', 'ة',/*Hebrew -> */ 'ק', 'ר', 'א', 'ט', 'ו', 'ן', 'ם', 'פ', 'ש', 'ד', 'ג', 'כ', 'ע', 'י', 'ח', 'ל', 'ך', 'ף', 'ז', 'ס', 'ב', 'ה', 'נ', 'מ', 'צ', 'ת', 'ץ'];
+		const chars: Array<string> = ['ا', 'ب', 'پ', 'ت', 'ث', 'ج', 'چ', 'ح', 'خ', 'س', 'ش', 'د', 'ذ', 'ر', 'ز', 'ژ', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ک', 'گ', 'ل', 'م', 'ن', 'و', 'ه', 'ی', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹', 'ي', 'ئ', 'آ', 'ك', 'ء', 'ؤ', 'إ', 'أ', 'ة',/*Hebrew -> */ 'ק', 'ר', 'א', 'ט', 'ו', 'ן', 'ם', 'פ', 'ש', 'ד', 'ג', 'כ', 'ע', 'י', 'ח', 'ל', 'ך', 'ף', 'ז', 'ס', 'ב', 'ה', 'נ', 'מ', 'צ', 'ת', 'ץ'];
 
 		this.registerMarkdownPostProcessor((container, context) => {
 			// Fixes the Reading view (for tables & callouts this fixes the editor too)
@@ -52,6 +52,30 @@ export default class DynamicRTL extends Plugin {
 						icon.style.marginRight = '-22px';
 						icon.style.float = 'right';
 					}
+				}
+			});
+			// Fixes the bidi pargraph problem in reading mode
+			container.querySelectorAll('p').forEach((element: HTMLParagraphElement) => {
+				let biDiParagraph: string = '';
+				element.innerHTML.split('<br>').forEach((line: string) => {
+					biDiParagraph += `<div dir="auto">${line}</div>`;
+				});
+				element.innerHTML = biDiParagraph;
+			});
+			// Fixes the bidi code block problem in reading mode
+			container.querySelectorAll('code').forEach((element: HTMLElement) => {
+				let biDiCode: string = '';
+				element.innerHTML.split('\n').forEach((line: string, index: number, array: Array<string>) => {
+					if (index != array.length - 1) {
+						biDiCode += `<div dir="auto">${line}</div>`;
+					}
+				});
+				element.innerHTML = biDiCode;
+			});
+			// Moves copy button for RTL code blocks to the left
+			container.querySelectorAll('pre').forEach((element: HTMLPreElement) => {
+				if (chars.includes(element.innerText.charAt(0))) {
+					element.classList.add('rtlPre');
 				}
 			});
 		});
