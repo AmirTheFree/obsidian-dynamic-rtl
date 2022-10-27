@@ -4,7 +4,7 @@
 
 #### Dynamic (Per line/paragraph depending on the language you type) RTL/LTR support plugin for Obsidian.md
 
-[![Obsidian Plugin Version](https://img.shields.io/badge/Obsidian.md%20Community%20Plugins-0.2.4-blue?style=for-the-badge&logo=obsidian&logoColor=purple&labelColor=cyan)](https://obsidian.md)
+[![Obsidian Plugin Version](https://img.shields.io/badge/Obsidian.md%20Community%20Plugins-0.2.5-blue?style=for-the-badge&logo=obsidian&logoColor=purple&labelColor=cyan)](https://obsidian.md)
 
 ---
 ## Preview 👁️
