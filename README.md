@@ -4,7 +4,9 @@
 
 #### Dynamic (Per line/paragraph depending on the language you type) RTL/LTR support plugin for Obsidian.md
 
-[![Obsidian Plugin Version](https://img.shields.io/badge/Obsidian.md%20Community%20Plugins-0.2.6-blue?style=for-the-badge&logo=obsidian&logoColor=purple&labelColor=cyan)](https://obsidian.md)
+[![Obsidian Plugin Version](https://img.shields.io/github/manifest-json/v/mwxgaf/obsidian-dynamic-rtl?color=blue&label=Obsidian.md%20Community%20Plugins&logo=obsidian&logoColor=purple&style=flat-square)](https://obsidian.md)
+[![GitHub Fixed Issues](https://img.shields.io/github/issues-closed/mwxgaf/obsidian-dynamic-rtl?color=success&label=issues&logo=github&style=flat-square)](https://github.com/mwxgaf/obsidian-dynamic-rtl/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub Stars](https://img.shields.io/github/stars/mwxgaf/obsidian-dynamic-rtl?color=gold&logo=github&style=flat-square)](https://github.com/mwxgaf/obsidian-dynamic-rtl/stargazers)
 
 ---
 ## Preview 👁️
