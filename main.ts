@@ -35,7 +35,7 @@ export default class DynamicRTL extends Plugin {
 			});
 			// Fixes the bullet points problem & bidirectional problem in reading mode
 			container.querySelectorAll('li').forEach(element => {
-				if (chars.includes(element.innerText.charAt(1))) {
+				if (chars.includes(element.innerText.charAt(0))) {
 					element.querySelectorAll('.list-bullet').forEach((bullet: HTMLElement) => {
 						bullet.style.float = 'right';
 						bullet.classList.add('rtl-bullet-point');
@@ -56,7 +56,7 @@ export default class DynamicRTL extends Plugin {
 			});
 			// Moves list indent border to right for RTL lists (Reading view)
 			container.querySelectorAll('ol,ul').forEach((element: HTMLElement) => {
-				if (chars.includes(element.innerText.charAt(0))) {
+				if (chars.includes(element.innerText.charAt(1))) {
 					element.classList.add('rtlList');
 				}
 			});
