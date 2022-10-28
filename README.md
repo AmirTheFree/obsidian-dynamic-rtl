@@ -10,7 +10,8 @@
 [![GitHub Forks](https://img.shields.io/github/forks/mwxgaf/obsidian-dynamic-rtl?logo=github)](https://github.com/mwxgaf/obsidian-dynamic-rtl/network/members)
 [![GitHub Downloads](https://img.shields.io/github/downloads/mwxgaf/obsidian-dynamic-rtl/total?logo=github)](https://github.com/mwxgaf/obsidian-dynamic-rtl/releases)
 
----
+[![Support](https://raw.githubusercontent.com/mwxgaf/obsidian-dynamic-rtl/master/support.png)](http://mwxgaf/support)
+
 ## Preview 👁️
 
 RTL/LTR will be dynamic for each line/paragraph depending on its starting language 🙂
