@@ -4,9 +4,11 @@
 
 #### Dynamic (Per line/paragraph depending on the language you type) RTL/LTR support plugin for Obsidian.md
 
-[![Obsidian Plugin Version](https://img.shields.io/github/manifest-json/v/mwxgaf/obsidian-dynamic-rtl?color=blue&label=Obsidian.md%20Community%20Plugins&logo=obsidian&logoColor=purple&style=flat-square)](https://obsidian.md)
-[![GitHub Fixed Issues](https://img.shields.io/github/issues-closed/mwxgaf/obsidian-dynamic-rtl?color=success&label=issues&logo=github&style=flat-square)](https://github.com/mwxgaf/obsidian-dynamic-rtl/issues?q=is%3Aissue+is%3Aclosed)
-[![GitHub Stars](https://img.shields.io/github/stars/mwxgaf/obsidian-dynamic-rtl?color=gold&logo=github&style=flat-square)](https://github.com/mwxgaf/obsidian-dynamic-rtl/stargazers)
+[![Obsidian Plugin Version](https://img.shields.io/github/manifest-json/v/mwxgaf/obsidian-dynamic-rtl?color=blue&label=Community%20Plugins&logo=obsidian&logoColor=purple&style=flat)](https://obsidian.md)
+[![GitHub Fixed Issues](https://img.shields.io/github/issues-closed/mwxgaf/obsidian-dynamic-rtl?color=success&label=issues&logo=github&style=flat)](https://github.com/mwxgaf/obsidian-dynamic-rtl/issues?q=is%3Aissue+is%3Aclosed)
+[![GitHub Stars](https://img.shields.io/github/stars/mwxgaf/obsidian-dynamic-rtl?color=gold&logo=github&style=flat)](https://github.com/mwxgaf/obsidian-dynamic-rtl/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/mwxgaf/obsidian-dynamic-rtl?logo=github)](https://github.com/mwxgaf/obsidian-dynamic-rtl/network/members)
+[![GitHub Downloads](https://img.shields.io/github/downloads/mwxgaf/obsidian-dynamic-rtl/total?logo=github)](https://github.com/mwxgaf/obsidian-dynamic-rtl/releases)
 
 ---
 ## Preview 👁️
