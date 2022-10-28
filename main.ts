@@ -1,13 +1,13 @@
 // In the name of Allah
 
-import { Plugin } from 'obsidian';
+import { MarkdownPostProcessorContext, Plugin } from 'obsidian';
 
 export default class DynamicRTL extends Plugin {
 
 	async onload() {
 		const chars: Array<string> = ['ا', 'ب', 'پ', 'ت', 'ث', 'ج', 'چ', 'ح', 'خ', 'س', 'ش', 'د', 'ذ', 'ر', 'ز', 'ژ', 'س', 'ش', 'ص', 'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ک', 'گ', 'ل', 'م', 'ن', 'و', 'ه', 'ی', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹', 'ي', 'ئ', 'آ', 'ك', 'ء', 'ؤ', 'إ', 'أ', 'ة',/*Hebrew -> */ 'ק', 'ר', 'א', 'ט', 'ו', 'ן', 'ם', 'פ', 'ש', 'ד', 'ג', 'כ', 'ע', 'י', 'ח', 'ל', 'ך', 'ף', 'ז', 'ס', 'ב', 'ה', 'נ', 'מ', 'צ', 'ת', 'ץ'];
 
-		this.registerMarkdownPostProcessor((container, context) => {
+		this.registerMarkdownPostProcessor((container: HTMLElement, context: MarkdownPostProcessorContext) => {
 			// Fixes the Reading view (for tables & callouts this fixes the editor too)
 			container.querySelectorAll('p,div.cm-line,h1,h2,h3,h4,h5,h6' + ',div.callout-title-inner').forEach(element => {
 				element.setAttribute('dir', 'auto');

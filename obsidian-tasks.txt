@@ -1,0 +1,16 @@
+/* Fixes the Tasks plugin RTL problem */
+.rtlTask {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+this.registerEvent(this.app.workspace.on('layout-change', () => {
+			this.app.workspace.containerEl.querySelectorAll('.plugin-tasks-list-item').forEach((element: HTMLLIElement) => {
+				if (chars.includes(element.innerText.charAt(0))) {
+					element.classList.add('rtlTask');
+				}
+			});
+		}))
+
+
+NOTE: This was the solution that came to my mind for solving the RTL problem with Tasks plugin but I did not add it to the plugin because it uses a bit much cpu/ram 

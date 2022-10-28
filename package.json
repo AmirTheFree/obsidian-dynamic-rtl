@@ -1,6 +1,6 @@
 {
 	"name": "dynamic-rtl",
-	"version": "0.2.7",
+	"version": "0.2.8",
 	"description": "Dynamic RTL/LTR direction per line/paragraph, dependant on language!",
 	"main": "main.js",
 	"scripts": {
