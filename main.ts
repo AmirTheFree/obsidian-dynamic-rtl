@@ -54,6 +54,12 @@ export default class DynamicRTL extends Plugin {
 					}
 				}
 			});
+			// Moves list indent border to right for RTL lists (Reading view)
+			container.querySelectorAll('ol,ul').forEach((element: HTMLElement) => {
+				if (chars.includes(element.innerText.charAt(0))) {
+					element.classList.add('rtlList');
+				}
+			})
 			// Fixes the bidi pargraph problem in reading mode
 			container.querySelectorAll('p').forEach((element: HTMLParagraphElement) => {
 				let biDiParagraph: string = '';

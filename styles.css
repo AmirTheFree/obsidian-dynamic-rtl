@@ -43,3 +43,9 @@ input.task-list-item-checkbox {
 body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
     left: unset !important;
 }
+
+/* Fixes the indent border direction for RTL lists (Reading view) */
+.rtlList::before {
+    left: unset !important;
+    right: var(--ig-adjust-reading) !important;
+}
