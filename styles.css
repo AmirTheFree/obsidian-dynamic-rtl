@@ -20,7 +20,7 @@ th {
 
 /* Fixes the bullet points margin with text in reading mode */
 .rtl-bullet-point:after {
-    margin-left: 40px !important;
+    margin-left: 20px !important;
 }
 
 /* Fixes the RTL checklists bad view */
@@ -37,4 +37,9 @@ input.task-list-item-checkbox {
 /* Fixes the code blocks indentation for RTL lines in editing view */
 .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
     padding-right: var(--size-4-4) !important;
+}
+
+/* Fixes the margin between bullet point & text in RTL bullet point (editing view) */
+body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
+    left: unset !important;
 }
