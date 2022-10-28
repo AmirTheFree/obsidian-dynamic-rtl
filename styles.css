@@ -10,7 +10,7 @@
 
 /* File title above editor or reading view for Obsidian v0.15.*/
     {
-    unicode-bidi: plaintext;
+    unicode-bidi: plaintext !important;
 }
 
 /* Fixes th elements */
@@ -20,21 +20,21 @@ th {
 
 /* Fixes the bullet points margin with text in reading mode */
 .rtl-bullet-point:after {
-    margin-left: 40px;
+    margin-left: 40px !important;
 }
 
 /* Fixes the RTL checklists bad view */
 input.task-list-item-checkbox {
-    margin-left: 6px;
+    margin-left: 6px !important;
 }
 
 /* Moves copy button for RTL code blocks to the left in reading view */
 .rtlPre>button {
     right: unset !important;
-    left: 0;
+    left: 0 !important;
 }
 
 /* Fixes the code blocks indentation for RTL lines in editing view */
 .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
-    padding-right: var(--size-4-4);
+    padding-right: var(--size-4-4) !important;
 }
