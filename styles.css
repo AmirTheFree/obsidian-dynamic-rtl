@@ -49,3 +49,8 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
     left: unset !important;
     right: var(--ig-adjust-reading) !important;
 }
+
+/* Fixes list indentation border margin with RTL text */
+.markdown-source-view.mod-cm6 .cm-indent::before {
+    transform: translateX(10px) !important;
+}
