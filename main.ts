@@ -41,8 +41,10 @@ export default class DynamicRTL extends Plugin {
 						bullet.classList.add('rtl-bullet-point');
 					});
 					element.style.textAlign = 'right';
+					element.style.direction = 'rtl';
 				} else {
 					element.style.textAlign = 'left';
+					element.style.direction = 'ltr';
 				}
 			});
 			// Moves collapse icon to the right for RTL headings
