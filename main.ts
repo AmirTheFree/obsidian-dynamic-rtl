@@ -2,13 +2,10 @@
 
 import { MarkdownPostProcessorContext, Plugin } from 'obsidian';
 
-function isRtlChar(c: string): boolean {
-	return /[\u0591-\u07FF\u200F\u202B\u202E\uFB1D-\uFDFD\uFE70-\uFEFC]/.test(c);
-}
-
 export default class DynamicRTL extends Plugin {
 
 	async onload() {
+		const RTLRegEx = /[\u0591-\u07FF\u200F\u202B\u202E\uFB1D-\uFDFD\uFE70-\uFEFC]/;
 
 		this.registerMarkdownPostProcessor((container: HTMLElement, context: MarkdownPostProcessorContext) => {
 			// Fixes the Reading view (for tables & callouts this fixes the editor too)
@@ -20,13 +17,13 @@ export default class DynamicRTL extends Plugin {
 			});
 			// Fixes the Callout title
 			container.querySelectorAll('.callout-title').forEach((element: HTMLElement) => {
-				if (isRtlChar(element.innerText.charAt(0))) {
+				if (RTLRegEx.test(element.innerText.charAt(0))) {
 					element.style.direction = 'rtl';
 				}
 			});
 			// Fixes the qoutes border direction in RTL texts
 			container.querySelectorAll('blockquote').forEach((element: HTMLElement) => {
-				if (isRtlChar(element.innerText.charAt(1))) {
+				if (RTLRegEx.test(element.innerText.charAt(1))) {
 					element.style.borderLeft = '0';
 					element.style.borderRight = 'var(--blockquote-border-thickness) solid var(--blockquote-border-color)';
 					element.style.marginRight = '23px';
@@ -38,7 +35,7 @@ export default class DynamicRTL extends Plugin {
 			});
 			// Fixes the bullet points problem & bidirectional problem in reading mode
 			container.querySelectorAll('li').forEach(element => {
-				if (isRtlChar(element.innerText.charAt(0))) {
+				if (RTLRegEx.test(element.innerText.charAt(0))) {
 					element.querySelectorAll('.list-bullet').forEach((bullet: HTMLElement) => {
 						bullet.style.float = 'right';
 						bullet.classList.add('rtl-bullet-point');
@@ -49,7 +46,7 @@ export default class DynamicRTL extends Plugin {
 			});
 			// Moves collapse icon to the right for RTL headings
 			container.querySelectorAll('h1,h2,h3,h4,h5,h6').forEach((element: HTMLElement) => {
-				if (isRtlChar(element.innerText.charAt(0))) {
+				if (RTLRegEx.test(element.innerText.charAt(0))) {
 					const icon = element.querySelector('div');
 					if (icon) {
 						icon.style.marginRight = '-22px';
@@ -59,7 +56,7 @@ export default class DynamicRTL extends Plugin {
 			});
 			// Moves list indent border to right for RTL lists (Reading view)
 			container.querySelectorAll('ol,ul').forEach((element: HTMLElement) => {
-				if (isRtlChar(element.innerText.charAt(1))) {
+				if (RTLRegEx.test(element.innerText.charAt(1))) {
 					element.classList.add('rtlList');
 				}
 			});
@@ -83,12 +80,11 @@ export default class DynamicRTL extends Plugin {
 			});
 			// Moves copy button for RTL code blocks to the left in reading view
 			container.querySelectorAll('pre').forEach((element: HTMLPreElement) => {
-				if (isRtlChar(element.innerText.charAt(0))) {
+				if (RTLRegEx.test(element.innerText.charAt(0))) {
 					element.classList.add('rtlPre');
 				}
 			});
 		});
 
 	}
-
 }
