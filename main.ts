@@ -92,6 +92,14 @@ export default class DynamicRTL extends Plugin {
 					element.classList.add('rtlPre');
 				}
 			});
+			// Moves external link icon to the left side for RTL links (Reading view)
+			container.querySelectorAll('a.external-link').forEach((element: HTMLAnchorElement) => {
+				if (RTLRegEx.test(element.innerText.charAt(0))) {
+					element.style.backgroundPosition = 'center left';
+					element.style.paddingRight = 'unset';
+					element.style.paddingLeft = '16px';
+				}
+			});
 		});
 
 	}
