@@ -40,6 +40,7 @@ export default class DynamicRTL extends Plugin {
 						bullet.style.float = 'right';
 						bullet.classList.add('rtl-bullet-point');
 					});
+					element.style.textAlign = 'right';
 				} else {
 					element.style.textAlign = 'left';
 				}
