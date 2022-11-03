@@ -70,13 +70,15 @@ export default class DynamicRTL extends Plugin {
 			});
 			// Fixes the bidi code block problem in reading mode
 			container.querySelectorAll('code').forEach((element: HTMLElement) => {
-				let biDiCode: string = '';
-				element.innerHTML.split('\n').forEach((line: string, index: number, array: Array<string>) => {
-					if (index != array.length - 1) {
-						biDiCode += `<div dir="auto">${line}</div>`;
-					}
-				});
-				element.innerHTML = biDiCode;
+				if (element.classList.length == 0) {
+					let biDiCode: string = '';
+					element.innerHTML.split('\n').forEach((line: string, index: number, array: Array<string>) => {
+						if (index != array.length - 1) {
+							biDiCode += `<div dir="auto">${line}</div>`;
+						}
+					});
+					element.innerHTML = biDiCode;
+				}
 			});
 			// Moves copy button for RTL code blocks to the left in reading view
 			container.querySelectorAll('pre').forEach((element: HTMLPreElement) => {
