@@ -72,12 +72,15 @@ export default class DynamicRTL extends Plugin {
 			container.querySelectorAll('code').forEach((element: HTMLElement) => {
 				if (element.classList.length == 0) {
 					let biDiCode: string = '';
-					element.innerHTML.split('\n').forEach((line: string, index: number, array: Array<string>) => {
-						if (index != array.length - 1) {
-							biDiCode += `<div dir="auto">${line}</div>`;
-						}
-					});
-					element.innerHTML = biDiCode;
+					const lineList = element.innerHTML.split('\n');
+					if (lineList.length > 1) {
+						lineList.forEach((line: string, index: number, array: Array<string>) => {
+							if (index != array.length - 1) {
+								biDiCode += `<div dir="auto">${line}</div>`;
+							}
+						});
+						element.innerHTML = biDiCode;
+					}
 				}
 			});
 			// Moves copy button for RTL code blocks to the left in reading view
