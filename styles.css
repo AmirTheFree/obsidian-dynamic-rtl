@@ -19,8 +19,14 @@ th {
 }
 
 /* Fixes the bullet points margin with text in reading mode */
-.rtl-bullet-point:after {
+.rtl-bullet-point::after {
     margin-left: 20px !important;
+}
+
+/* Fixes RTL bullet point direction for ITS theme */
+.rtlListItem::before {
+    float: right !important;
+    margin-left: unset !important;
 }
 
 /* Fixes the RTL checklists bad view */

@@ -42,6 +42,7 @@ export default class DynamicRTL extends Plugin {
 					});
 					element.style.textAlign = 'right';
 					element.style.direction = 'rtl';
+					element.classList.add('rtlListItem');
 				} else {
 					element.style.textAlign = 'left';
 					element.style.direction = 'ltr';
