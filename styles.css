@@ -53,7 +53,7 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
 /* Fixes the indent border direction for RTL lists (Reading view) */
 .rtlList::before {
     left: unset !important;
-    right: var(--ig-adjust-reading) !important;
+    right: 0px !important;
 }
 
 /* Fixes list indentation border margin with RTL text */
