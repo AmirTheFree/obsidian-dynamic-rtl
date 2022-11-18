@@ -26,4 +26,8 @@ Just install the plugin from Obsidian.md app ✅
 
 **Be comfortable about submitting pull requests  or issues 🐧**
 
+*Usually I check them in Thursdays & Fridays if I have time :calendar: *
+
+*Issues/PRs which doesn't have a label aren't checked yet :information_source: *
+
 ❤️ Thank you [lingdocs](https://forum.obsidian.md/u/lingdocs) & [Mustafa106](https://forum.obsidian.md/u/mustafa106) for initial idea.
