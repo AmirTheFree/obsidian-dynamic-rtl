@@ -1,7 +1,7 @@
 {
 	"id": "dynamic-rtl",
 	"name": "Dynamic RTL",
-	"version": "0.2.11",
+	"version": "0.2.12",
 	"minAppVersion": "0.15.0",
 	"description": "Dynamic RTL/LTR direction per line/paragraph, dependant on language!",
 	"author": "mwxgaf",
