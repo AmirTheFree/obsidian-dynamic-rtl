@@ -66,6 +66,10 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after {
     display: inline !important;
 }
 
+.tasks-list-text>div>div {
+    display: inline !important;
+}
+
 /* Fixes the Tasks plugin RTL problem */
 /* .plugin-tasks-list-item {
     direction: rtl !important;
