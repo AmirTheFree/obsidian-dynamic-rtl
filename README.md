@@ -28,11 +28,11 @@ Just install the plugin from Obsidian.md app & perform a reload ✅
 
 ## More 🤔
 
-**Be comfortable about submitting pull requests or issues 🐧**
+~~**Be comfortable about submitting pull requests or issues 🐧**~~
 
-_Usually I check them in Thursdays & Fridays if I have time 📆_
+~~_Usually I check them in Thursdays & Fridays if I have time 📆_~~
 
-_Issues/PRs which doesn't have a label aren't checked yet ℹ️_
+~~_Issues/PRs which doesn't have a label aren't checked yet ℹ️_~~
 
 ---
 
