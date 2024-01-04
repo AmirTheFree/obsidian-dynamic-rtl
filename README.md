@@ -32,7 +32,7 @@ Just install the plugin from Obsidian.md app & perform a reload ✅
 
 ~~_Usually I check them in Thursdays & Fridays if I have time 📆_~~
 
-~~_Issues/PRs which doesn't have a label aren't checked yet ℹ️_~~
+~~_Issues/PRs which doesn't have a label aren't checked yet ℹ️_~~ _The plugin is deprecated!_
 
 ---
 
