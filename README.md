@@ -2,8 +2,6 @@
 
 ---
 
-**In the name of Allah**
-
 # Obsidian Dynamic RTL
 
 #### Dynamic (Per line/paragraph depending on the language you type) RTL/LTR support plugin for Obsidian.md
